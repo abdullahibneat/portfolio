@@ -50,7 +50,7 @@
     }
 
     .links {
-        position: absolute;
+        position: fixed;
         display: flex;
         flex-direction: column;
         justify-content: center;
