@@ -1,4 +1,6 @@
 <script>
+	import Section from "../components/Section.svelte";
+
 	export let name = "World"
 </script>
 
@@ -6,4 +8,6 @@
 	<title>Sapper</title>
 </svelte:head>
 
-<h1>Hello, {name}</h1>
+<Section>
+	<h1>Hello, {name}</h1>
+</Section>

@@ -5,9 +5,7 @@
 
 <Navbar />
 
-<main>
-	<slot/>
-</main>
+<slot/>
 
 <Footer />
 
