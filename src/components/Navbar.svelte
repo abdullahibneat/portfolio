@@ -43,6 +43,17 @@
         cursor: pointer;
         user-select: none;
         font-size: 1.5rem;
+        position: fixed;
+        right: 10%;
+        color: white;
+        width: 3rem;
+        height: 3rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 50%;
+        background: var(--primary);
+        opacity: 0.75;
     }
 
     :global(a) {
