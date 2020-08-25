@@ -4,7 +4,7 @@
 </script>
 
 <nav>
-    <div>LOGO HERE</div>
+    <div class="logo">LOGO HERE</div>
 
     <span class="menu-icon" on:click={toggleLinks}>
         {showLinks? "✕" : "☰"}
@@ -25,6 +25,11 @@
         margin: 0 auto;
     }
 
+    .logo {
+        color: var(--primary);
+        font-weight: bold;
+    }
+
     .menu-icon {
         z-index: 1;
         cursor: pointer;
@@ -35,13 +40,17 @@
         display: none;
     }
 
+    :global(a) {
+        text-decoration: none;
+    }
+
     :global(#links.show) {
         position: absolute;
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        background: white;
+        background: var(--primary);
         top: 0; right: 0; bottom: 0; left: 0;
     }
     
