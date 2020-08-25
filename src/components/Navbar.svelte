@@ -55,6 +55,10 @@
         background: var(--primary);
         top: 0; right: 0; bottom: 0; left: 0;
     }
+
+    :global(#links > a:not(:last-child)) {
+        margin-bottom: 1rem;
+    }
     
     @media only screen and (min-width: 990px) {
         .menu-icon {
@@ -68,6 +72,11 @@
         :global(#links.show) {
             position: initial;
             background: none;
+        }
+
+        :global(#links > a:not(:last-child)) {
+            margin-bottom: 0;
+            margin-right: 1rem;
         }
     }
 </style>
