@@ -1,3 +1,14 @@
+/* Variables */
+:root {
+	--primary: #F4A261;
+	--dark: #242423;
+	--disabled: #868686;
+	--box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+	--box-shadow-hover: 0 0 15px rgba(0,0,0,.1);
+	--box-shadow-hover-large: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+	--linear-gradient: linear-gradient(to right top, #f4a261, #f6ad5f, #f7b75f, #f6c35f, #f4ce61);
+}
+
 *,
 *::before,
 *::after {
