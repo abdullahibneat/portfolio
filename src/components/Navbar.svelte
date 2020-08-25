@@ -1,9 +1,13 @@
 <script>
     import Section from "./Section.svelte";
 
-    let showLinks = false
+    let width
+    $: showLinks = width > 990
+
     const toggleLinks = () => showLinks = !showLinks
 </script>
+
+<svelte:window bind:innerWidth={width} />
 
 <Section>
     <nav>
@@ -13,9 +17,11 @@
             {showLinks? "✕" : "☰"}
         </span>
     
-        <div id="links" class={showLinks? "show" : ""}>
-            <a href="/">Home</a>
-        </div>
+        {#if showLinks}
+            <div class="links">
+                <a href="/">Home</a>
+            </div>
+        {/if}
     </nav>
 </Section>
 
@@ -38,15 +44,11 @@
         font-size: 1.5rem;
     }
 
-    #links {
-        display: none;
-    }
-
     :global(a) {
         text-decoration: none;
     }
 
-    :global(#links.show) {
+    .links {
         position: absolute;
         display: flex;
         flex-direction: column;
@@ -56,7 +58,7 @@
         top: 0; right: 0; bottom: 0; left: 0;
     }
 
-    :global(#links > a:not(:last-child)) {
+    .links > :global(a:not(:last-child)) {
         margin-bottom: 1rem;
     }
     
@@ -65,16 +67,13 @@
             display: none;
         }
 
-        #links {
-            display: block;
-        }
-
-        :global(#links.show) {
+        .links {
+            flex-direction: row;
             position: initial;
             background: none;
         }
 
-        :global(#links > a:not(:last-child)) {
+        .links > :global(a:not(:last-child)) {
             margin-bottom: 0;
             margin-right: 1rem;
         }
