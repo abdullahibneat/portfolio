@@ -1,5 +1,6 @@
 <script>
     import Section from "./Section.svelte";
+    import { slide } from "svelte/transition"
 
     let width
     $: showLinks = width > 990
@@ -18,7 +19,7 @@
         </span>
     
         {#if showLinks}
-            <div class="links">
+            <div class="links" transition:slide>
                 <a href="/">Home</a>
             </div>
         {/if}
@@ -55,6 +56,7 @@
         justify-content: center;
         align-items: center;
         background: var(--primary);
+        opacity: 0.95;
         top: 0; right: 0; bottom: 0; left: 0;
     }
 
