@@ -8,14 +8,12 @@
     </footer>
 </Section>
 
-<style>
+<style lang="scss">
     footer {
         font-size: 0.9rem;
         text-align: center;
-    }
 
-    @media only screen and (min-width: 990px) {
-        footer {
+        @media only screen and (min-width: 990px) {
             text-align: initial;
         }
     }
