@@ -67,6 +67,8 @@
 
             :global(a) {
                 text-decoration: none;
+                color: var(--dark);
+                font-size: 1.5rem;
             }
 
             :global(a:not(:last-child)) {
@@ -84,9 +86,13 @@
                 position: initial;
                 background: none;
 
-                :global(a:not(:last-child)) {
-                    margin-bottom: 0;
-                    margin-right: 1rem;
+                :global(a) {
+                    font-size: initial;
+
+                    &:not(:last-child) {
+                        margin-bottom: 0;
+                        margin-right: 1rem;
+                    }
                 }
             }
         }
