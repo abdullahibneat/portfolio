@@ -47,6 +47,11 @@
 		<p>Consectetur adipiscing elit. Mauris in est scelerisque, scelerisque risus vel, tincidunt dolor.</p>
 	</div>
 	<div style="display: flex; align-items: center; justify-content: center;">
-		<p>Latest project here</p>
+		<ProjectCard compact {...projects[0]} />
 	</div>
 </Intro>
+
+<Section>
+	<h1 style="margin-bottom: 1rem">Featured projects</h1>
+	<ProjectsGrid {projects} />
+</Section>
