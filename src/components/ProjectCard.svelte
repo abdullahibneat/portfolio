@@ -4,10 +4,11 @@
     export let summary = ""
     export let repoURL = ""
     export let projectURL = ""
+    export let compact = false
 </script>
 
-<div class="wrapper">
-    <div class="container">
+<div class:wrapper={!compact}>
+    <div class="container" class:compact>
         <img src={featuredImage} alt={title}>
         <div class="content">
             <h2>{title}</h2>
@@ -43,6 +44,10 @@
             justify-content: center;
             align-items: center;
 
+            p {
+                font-size: 1rem;
+            }
+
             &, :global(a) {
                 color: white;
             }
@@ -59,17 +64,44 @@
             }
         }
 
-        @media only screen and (min-width: 990px) {
-            flex-direction: column;
+        &.compact {
+            position: relative;
 
             img {
                 width: 100%;
-                border-radius: .75rem .75rem 0 0;
+                border-radius: .75rem;
             }
 
             .content {
-                align-items: flex-start;
-                padding-top: 1rem;
+                position: absolute;
+                top: 0; right: 0; bottom: 0; left: 0;
+                border-radius: .75rem;
+                background-image: var(--linear-gradient);
+                justify-content: space-between;
+                height: 100%;
+                min-height: fit-content;
+                opacity: 0;
+                transition: opacity 250ms ease;
+            }
+
+            &:hover .content {
+                opacity: 1;
+            }
+        }
+
+        @media only screen and (min-width: 990px) {
+            &:not(.compact) {
+                flex-direction: column;
+
+                img {
+                    width: 100%;
+                    border-radius: .75rem .75rem 0 0;
+                }
+
+                .content {
+                    align-items: flex-start;
+                    padding-top: 1rem;
+                }
             }
         }
     }
