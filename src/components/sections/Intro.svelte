@@ -15,6 +15,9 @@
         & > :global(div) {
             flex: 1;
             padding: 2rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
 
             & > :global(*:not(:last-child)) {
                 margin-bottom: 1rem;
