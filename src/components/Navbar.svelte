@@ -10,7 +10,7 @@
 
 <svelte:window bind:innerWidth={width} />
 
-<Section>
+<Section style="z-index: 99">
     <nav>
         <div class="logo">LOGO HERE</div>
     
@@ -38,7 +38,7 @@
         }
 
         .menu-icon {
-            z-index: 1;
+            z-index: 100;
             cursor: pointer;
             user-select: none;
             font-size: 1.5rem;
