@@ -7,7 +7,7 @@
     export let compact = false
 </script>
 
-<div class:wrapper={!compact}>
+<div class={$$props.class} class:wrapper={!compact}>
     <div class="container" class:compact>
         <img src={featuredImage} alt={title}>
         <div class="content">
@@ -27,13 +27,11 @@
     }
 
     .container {
-        background-image: var(--linear-gradient);
-        border-radius: .75rem;
         display: flex;
+        flex-direction: column;
 
         img {
-            width: 50%;
-            border-radius: .75rem 0 0 .75rem;
+            border-radius: .75rem .75rem 0 0;
         }
 
         .content {
@@ -42,13 +40,15 @@
             display: flex;
             flex-direction: column;
             justify-content: center;
-            align-items: center;
+            align-items: flex-start;
+            background-image: var(--linear-gradient);
+            border-radius: 0 0 .75rem .75rem;
 
             p {
                 font-size: 1rem;
             }
 
-            &, :global(a) {
+            &, a {
                 color: white;
             }
             
@@ -78,6 +78,7 @@
                 border-radius: .75rem;
                 background-image: var(--linear-gradient);
                 justify-content: space-between;
+                align-items: center;
                 height: 100%;
                 min-height: fit-content;
                 opacity: 0;
@@ -86,22 +87,6 @@
 
             &:hover .content {
                 opacity: 1;
-            }
-        }
-
-        @media only screen and (min-width: 990px) {
-            &:not(.compact) {
-                flex-direction: column;
-
-                img {
-                    width: 100%;
-                    border-radius: .75rem .75rem 0 0;
-                }
-
-                .content {
-                    align-items: flex-start;
-                    padding-top: 1rem;
-                }
             }
         }
     }
