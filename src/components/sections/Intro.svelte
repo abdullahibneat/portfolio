@@ -1,40 +1,54 @@
 <script>
     import Section from "../Section.svelte"
+    export let title
+    export let text
 </script>
 
 <Section class="intro">
-    <slot/>
+    <div>
+        <h1>{title}</h1>
+        <p>{text}</p>
+    </div>
+    <div>
+        <slot/>
+    </div>
 </Section>
 
 <style lang="scss">
-    :global(.intro) {
-        display: flex;
-        flex-direction: column;
+    div {
+        flex: 1;
         text-align: center;
 
-        & > :global(div) {
-            flex: 1;
-            padding: 2rem;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-
-            & > :global(*:not(:last-child)) {
-                margin-bottom: 1rem;
-            }
-        }
-
-        :global(h1) {
+        h1 {
             font-size: 2.5rem;
         }
 
-        :global(p) {
+        p {
             font-size: 1.5rem;
         }
 
+        &:first-of-type {
+            padding: 3rem 1rem;
+        }
+
+        & > *:not(:last-child) {
+            margin-bottom: 1rem;
+        }
+    }
+
+    :global(.intro) {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
         @media only screen and (min-width: 990px) {
             flex-direction: row;
-            text-align: initial;
+
+            div {
+                padding: 1rem;
+                text-align: initial;
+            }
         }
     }
 </style>
