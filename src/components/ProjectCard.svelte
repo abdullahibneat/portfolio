@@ -55,7 +55,6 @@
             border-radius: 0 0 .75rem .75rem;
 
             p {
-                font-size: 1rem;
                 margin: 1rem 0;
             }
 
