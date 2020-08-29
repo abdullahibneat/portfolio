@@ -10,7 +10,7 @@
 
 <svelte:window bind:innerWidth={width} />
 
-<Section style="z-index: 99">
+<Section class="nav" style="z-index: 99">
     <nav>
         <div class="logo">LOGO HERE</div>
     
@@ -27,6 +27,11 @@
 </Section>
 
 <style lang="scss">
+    // Remove padding top from section after nav
+    :global(.nav + section) {
+        padding-top: 0;
+    }
+
     nav {
         display: flex;
         justify-content: space-between;
