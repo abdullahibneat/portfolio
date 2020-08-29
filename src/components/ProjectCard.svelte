@@ -1,4 +1,14 @@
 <script>
+    // When compact, display as many lines of the summary as possible using CSS: -webkit-line-clamp
+    // Determine number of lines to display based on content height minus the following:
+    // - (32 + 32) (container padding top + bottom)
+    // - 36 (title height)
+    // - (16 + 16) (summary margin top & bottom)
+    // - 24 (links div height)
+    // Finally, divide by 24 = 16 * 1.5 (line-height) to get number of lines available on screen
+    let contentHeight
+    $: lineClamp = Math.floor((contentHeight - 156) / 24)
+
     export let featuredImage = "https://via.placeholder.com/1280x720?text=Featured+Image"
     export let title = ""
     export let summary = ""
@@ -10,9 +20,9 @@
 <div class={$$props.class} class:wrapper={!compact}>
     <div class="container" class:compact>
         <img src={featuredImage} alt={title}>
-        <div class="content">
+        <div class="content" bind:offsetHeight={contentHeight}>
             <h2>{title}</h2>
-            <p>{summary}</p>
+            <p style="-webkit-line-clamp: {lineClamp}">{summary}</p>
             <div class="links">
                 {#if repoURL}<a href={repoURL}>GitHub →</a>{/if}
                 {#if projectURL}<a href={projectURL}>Read More →</a>{/if}
@@ -46,6 +56,7 @@
 
             p {
                 font-size: 1rem;
+                margin: 1rem 0;
             }
 
             &, a {
@@ -57,10 +68,6 @@
                 justify-content: space-between;
                 width: 100%;
                 font-size: 0.8rem;
-            }
-
-            & > *:not(:last-child) {
-                margin-bottom: 1rem;
             }
         }
 
@@ -83,6 +90,13 @@
                 min-height: fit-content;
                 opacity: 0;
                 transition: opacity 250ms ease;
+
+                p {
+                    display: -webkit-box;
+                    -webkit-box-orient: vertical;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                }
             }
 
             &:hover .content {
