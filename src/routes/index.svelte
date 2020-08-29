@@ -35,6 +35,11 @@
 		}
 	]
 
+	const intro = {
+		title: "Lorem ipsum dolor sit amet",
+		text: "Consectetur adipiscing elit. Mauris in est scelerisque, scelerisque risus vel, tincidunt dolor."
+	}
+
 </script>
 
 <svelte:head>
@@ -43,8 +48,8 @@
 
 <Intro>
 	<div>
-		<h1>Lorem ipsum dolor sit amet</h1>
-		<p>Consectetur adipiscing elit. Mauris in est scelerisque, scelerisque risus vel, tincidunt dolor.</p>
+		<h1>{intro.title}</h1>
+		<p>{intro.text}</p>
 	</div>
 	<div style="display: flex; align-items: center; justify-content: center;">
 		<ProjectCard compact {...projects[0]} />
