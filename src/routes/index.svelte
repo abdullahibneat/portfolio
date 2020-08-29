@@ -46,14 +46,8 @@
 	<title>Home | Abdullah Ibne Atiq</title>
 </svelte:head>
 
-<Intro>
-	<div>
-		<h1>{intro.title}</h1>
-		<p>{intro.text}</p>
-	</div>
-	<div style="display: flex; align-items: center; justify-content: center;">
-		<ProjectCard compact {...projects[0]} />
-	</div>
+<Intro {...intro}>
+	<ProjectCard compact {...projects[0]} />
 </Intro>
 
 <Section>
