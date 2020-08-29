@@ -39,6 +39,7 @@
     .container {
         display: flex;
         flex-direction: column;
+        border-radius: .75rem;
 
         img {
             border-radius: .75rem .75rem 0 0;
@@ -67,6 +68,16 @@
                 justify-content: space-between;
                 width: 100%;
                 font-size: 0.8rem;
+            }
+        }
+
+        &:not(.compact) {
+            box-shadow: var(--box-shadow);
+            transition: all 250ms ease;
+
+            &:hover {
+                box-shadow: var(--box-shadow-hover-large);
+                transform: scale(1.02);
             }
         }
 
