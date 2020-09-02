@@ -20,8 +20,8 @@
         }
 
         &.fullWidth h1 {
-            width: 80%;
-            margin: 0 auto 1rem;
+            text-align: center;
+            margin-bottom: 2rem;
         }
 
         &:not(.fullWidth) {
