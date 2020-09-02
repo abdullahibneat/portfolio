@@ -1,8 +1,10 @@
 <script>
+    export let title
     export let fullWidth = false
 </script>
 
-<section class:fullWidth class={$$props.class} style={$$props.style}>
+<section title class:fullWidth class={$$props.class} style={$$props.style}>
+    {#if title}<h1>{title}</h1>{/if}
     <slot />
 </section>
 
@@ -12,6 +14,15 @@
         margin: 0 auto;
         width: 100%;
         max-width: 80rem;
+
+        h1 {
+            margin-bottom: 1rem;
+        }
+
+        &.fullWidth h1 {
+            width: 80%;
+            margin: 0 auto 1rem;
+        }
 
         &:not(.fullWidth) {
             width: 90%;
