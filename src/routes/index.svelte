@@ -50,7 +50,7 @@
 	<ProjectCard compact {...projects[0]} />
 </Intro>
 
-<Section>
+<Section fullWidth>
 	<h1 style="margin-bottom: 1rem">Featured projects</h1>
 	<ProjectsGrid {projects} />
 </Section>
