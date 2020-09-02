@@ -51,5 +51,5 @@
 </Intro>
 
 <Section title="Featured projects" fullWidth>
-	<ProjectsGrid {projects} />
+	<ProjectsGrid {projects} horizontalScroll />
 </Section>
