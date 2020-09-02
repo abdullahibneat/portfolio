@@ -13,7 +13,6 @@
         padding: 3rem 0;
         margin: 0 auto;
         width: 100%;
-        max-width: 80rem;
 
         h1 {
             margin-bottom: 1rem;
@@ -26,6 +25,7 @@
 
         &:not(.fullWidth) {
             width: 90%;
+            max-width: 80rem;
             padding-left: 1.5rem;
             padding-right: 1.5rem;
 
