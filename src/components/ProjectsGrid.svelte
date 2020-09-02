@@ -52,7 +52,7 @@ import ProjectCard from "./ProjectCard.svelte";
             }
 
             @media only screen and (min-width: 600px) {
-                flex: 0 0 50%;
+                max-width: 583px;
             }
         }
     }
