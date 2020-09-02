@@ -33,23 +33,17 @@ import ProjectCard from "./ProjectCard.svelte";
         overflow-x: auto;
         padding-bottom: 2rem;
 
+        &:after, &:before {
+            content: "";
+            padding-right: 3rem;
+
+            @media only screen and (min-width: 990px) {
+                padding-right: 6rem;
+            }
+        }
+
         :global(.project) {
             flex: 0 0 100%;
-            position: relative;
-
-            &:first-of-type {
-                margin-left: 7rem;
-            }
-
-            // margin-right does not work for last element, use absolute positioning
-            &:last-of-type:after {
-                content: "";
-                display: block;
-                position: absolute;
-                height: 20px;
-                width: 7rem;
-                right: -7rem;
-            }
 
             @media only screen and (min-width: 600px) {
                 max-width: 583px;
