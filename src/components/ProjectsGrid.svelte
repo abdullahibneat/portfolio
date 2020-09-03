@@ -5,10 +5,12 @@ import ProjectCard from "./ProjectCard.svelte";
     export let horizontalScroll = false
 </script>
 
-<div class="container" class:horizontalScroll>
-    {#each projects as project }
-        <ProjectCard class="project" {...project} />
-    {/each}
+<div class="wrapper" class:horizontalScroll>
+    <div class="container">
+        {#each projects as project }
+            <ProjectCard class="project" {...project} />
+        {/each}
+    </div>
 </div>
 
 <style lang="scss">
@@ -28,25 +30,19 @@ import ProjectCard from "./ProjectCard.svelte";
     }
 
     .horizontalScroll {
-        width: 100%;
-        flex-wrap: nowrap;
         overflow-x: auto;
-        padding-bottom: 2rem;
 
-        &:after, &:before {
-            content: "";
-            padding-right: 3rem;
+        .container {
+            flex-wrap: nowrap;
+            flex-direction: row;
+            justify-content: center;
 
-            @media only screen and (min-width: 990px) {
-                padding-right: 6rem;
-            }
-        }
+            // Add padding to start/end, float is necessary
+            padding: 0 7rem 2rem;
+            float: left;
 
-        :global(.project) {
-            flex: 0 0 100%;
-
-            @media only screen and (min-width: 600px) {
-                max-width: 583px;
+            :global(.project) {
+                min-width: 20rem;
             }
         }
     }
