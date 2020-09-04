@@ -21,6 +21,14 @@
             flex: 50%;
             padding: .5rem;
             max-width: 15rem;
+            align-items: flex-start;
+
+            @media only screen and (min-width: 990px) {
+                &:nth-child(2n) {
+                    padding-top: 3rem;
+                    align-items: flex-end;
+                }
+            }
         }
     }
 </style>
