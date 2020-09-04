@@ -5,6 +5,7 @@
 	import ProjectsGrid from "../components/ProjectsGrid.svelte"
 	import SkillGrid from "../components/SkillCardGrid.svelte"
 	import Button from "../components/Button.svelte"
+	import Testimonials from "../components/sections/Testimonials.svelte"
 
 	const projects = [
 		{
@@ -69,6 +70,21 @@
 		}
 	]
 
+	const testimonials = [
+		{
+			text: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Asperiores quis quisquam dicta velit similique facilis nam alias saepe dolor architecto.",
+			author: "John Doe"
+		},
+		{
+			text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt mollitia accusantium nemo!",
+			author: "John Doe"
+		},
+		{
+			text: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Deserunt autem itaque velit quia sunt cum dolorum.",
+			author: "John Doe"
+		}
+	]
+
 </script>
 
 <svelte:head>
@@ -91,6 +107,8 @@
 		<a href="#"><Button label="View all projects →" /></a>
 	</div>
 </Section>
+
+<Testimonials {testimonials}/>
 
 <style lang="scss">
 	:global(.skillsSection) {
