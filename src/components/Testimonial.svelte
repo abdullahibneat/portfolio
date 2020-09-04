@@ -3,7 +3,7 @@
     export let author = ""
 </script>
 
-<div class={$$props.class} style={$$props.style}>
+<div class={$$props.class} style={$$props.style} id={$$props.id}>
     <blockquote>{text}</blockquote>
     <cite>{author}</cite>
 </div>
