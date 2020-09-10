@@ -3,7 +3,7 @@
     export let onClick = () => {}
 </script>
 
-<button on:click={onClick}>{label}</button>
+<button class={$$props.class} on:click={onClick}>{label}</button>
 
 <style lang="scss">
     button {
