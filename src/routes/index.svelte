@@ -6,6 +6,7 @@
 	import SkillGrid from "../components/SkillCardGrid.svelte"
 	import Button from "../components/Button.svelte"
 	import Testimonials from "../components/sections/Testimonials.svelte"
+	import ContactBanner from "../components/sections/ContactBanner.svelte"
 
 	const projects = [
 		{
@@ -109,6 +110,8 @@
 </Section>
 
 <Testimonials {testimonials}/>
+
+<ContactBanner />
 
 <style lang="scss">
 	:global(.skillsSection) {
