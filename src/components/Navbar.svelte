@@ -21,6 +21,7 @@
         {#if showLinks}
             <div class="links" transition:slide>
                 <a href="/">Home</a>
+                <a href="projects">Projects</a>
             </div>
         {/if}
     </nav>

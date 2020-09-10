@@ -35,7 +35,7 @@
 	<div>
 		<h1>What I do</h1>
 		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maiores explicabo itaque obcaecati molestiae dolorem vitae corporis? Magni, nesciunt? Exercitationem ipsum cupiditate ducimus voluptatem, voluptas sint.</p>
-		<a href="#"><Button label="View all projects →" /></a>
+		<a href="projects"><Button label="View all projects →" /></a>
 	</div>
 </Section>
 
