@@ -7,7 +7,7 @@
 </script>
 
 <Section title="Projects">
-    <ProjectsGrid {projects} />
+    <ProjectsGrid {projects} filtering />
 </Section>
 
 <ContactBanner />
