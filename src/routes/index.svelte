@@ -8,84 +8,14 @@
 	import Testimonials from "../components/sections/Testimonials.svelte"
 	import ContactBanner from "../components/sections/ContactBanner.svelte"
 
-	const projects = [
-		{
-			"title": "Blog list",
-			"summary": "A full stack application to save blogs, built to learn React and NodeJS. It features interacting with a MongoDB database, user authentication, testing and continuous integration through Vercel.",
-			"featuredImage": "https://abdu.io/assets/media/BlogList/ft.jpg",
-			"projectURL": "https://abdu.io/project/blog-application/",
-			"repoURL": "https://github.com/abdullahibneat/blog-backend"
-		},
-		{
-			"title": "Chat Room",
-			"summary": "A Java peer-to-peer chatroom where people can send messages and communicate with each other",
-			"featuredImage": "https://abdu.io/assets/media/ChatRoom/ft.jpg",
-			"projectURL": "https://abdu.io/project/chaat-room/",
-			"repoURL": "https://github.com/abdullahibneat/p2p-chat-room"
-		},
-		{
-			"title": "PointAR",
-			"summary": "My team and I identified a problem found in a number of sectors: integration. The solution? Augmented Reality, BYOD and Fujitsu Technology.",
-			"featuredImage": "https://abdu.io/assets/media/PointAR/ft.jpg",
-			"projectURL": "https://abdu.io/project/pointar/",
-			"repoURL": "https://github.com/abdullahibneat/PointAR"
-		},
-		{
-			"title": "PointAR",
-			"summary": "My team and I identified a problem found in a number of sectors: integration. The solution? Augmented Reality, BYOD and Fujitsu Technology.",
-			"featuredImage": "https://abdu.io/assets/media/PointAR/ft.jpg",
-			"projectURL": "https://abdu.io/project/pointar/",
-			"repoURL": "https://github.com/abdullahibneat/PointAR"
-		}
-	]
+	import projects from "../../data/projects"
+	import skills from "../../data/skills"
+	import testimonials from "../../data/testimonials"
 
 	const intro = {
 		title: "Lorem ipsum dolor sit amet",
 		text: "Consectetur adipiscing elit. Mauris in est scelerisque, scelerisque risus vel, tincidunt dolor."
 	}
-
-	const skills = [
-        {
-            name: "Full Stack Development",
-            description: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Inventore, cumque.",
-            urlLabel: "See projects →",
-            url: "#"
-        },
-        {
-            name: "Backend Development",
-            description: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Inventore, cumque.",
-            urlLabel: "See projects →",
-            url: "#"
-        },
-        {
-            name: "Databases",
-            description: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Inventore, cumque.",
-            urlLabel: "See projects →",
-            url: "#"
-        },
-        {
-            name: "Git",
-            description: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Inventore, cumque.",
-            urlLabel: "See projects →",
-            url: "#"
-		}
-	]
-
-	const testimonials = [
-		{
-			text: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Asperiores quis quisquam dicta velit similique facilis nam alias saepe dolor architecto.",
-			author: "John Doe"
-		},
-		{
-			text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt mollitia accusantium nemo!",
-			author: "John Doe"
-		},
-		{
-			text: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Deserunt autem itaque velit quia sunt cum dolorum.",
-			author: "John Doe"
-		}
-	]
-
 </script>
 
 <svelte:head>
